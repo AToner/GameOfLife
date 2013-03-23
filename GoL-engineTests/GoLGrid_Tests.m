@@ -22,7 +22,6 @@
     // Set-up code here.
 
     [super setUp];
-    _grid = [GoLGrid alloc];
 }
 
 - (void)tearDown
@@ -30,16 +29,23 @@
     // Tear-down code here.
     
     [super tearDown];
-    _grid = nil;
 }
 
 - (void)testExample
 {
-    CGSize size = CGSizeMake(100, 150);
-    [_grid init:size];
+    CGFloat height = 150;
+    CGFloat width = 100;
+    CGSize size = CGSizeMake(width, height);
+    _grid = [[GoLGrid alloc] initWithSize:size];
     
-    STAssertEquals(_grid.size.height, size.height, @"Heights should be teh same");
-    STAssertEquals(_grid.size.width, size.width, @"Width should be teh same");
+    STAssertEquals(_grid.size.height, height, @"Heights should be teh same");
+    STAssertEquals(_grid.size.width, width, @"Width should be teh same");
+    
+    NSArray *resultingGrid = [_grid getGrid];
+    STAssertNotNil(resultingGrid, @"The resulting grid should not be nil");
+    STAssertEquals([[NSNumber numberWithInteger:resultingGrid.count] intValue],
+                   [[NSNumber numberWithFloat:height] intValue],
+                   @"Resulting grid array count should be height");
 }
 
 @end

@@ -1,5 +1,5 @@
 //
-//  GoLGrid.h
+//  GoLCell.h
 //  GoL-engine
 //
 //  Created by Andrew Toner on 3/23/13.
@@ -8,13 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface GoLGrid : NSObject
-
-@property (readonly, nonatomic) CGSize size;
-
-- (id)initWithSize:(CGSize)size;
-
-- (NSArray *)getGrid;
-
+@interface GoLCell : NSObject
 
 @end

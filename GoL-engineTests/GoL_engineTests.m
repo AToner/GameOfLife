@@ -26,7 +26,7 @@
 
 - (void)testExample
 {
-    STFail(@"Unit tests are not implemented yet in GoL-engineTests");
+//    STFail(@"Unit tests are not implemented yet in GoL-engineTests");
 }
 
 @end

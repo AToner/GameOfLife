@@ -23,6 +23,9 @@
 		4954CDF116FE1BBA00759F52 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4954CDCC16FE1BB900759F52 /* Foundation.framework */; };
 		4954CDF916FE1BBA00759F52 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4954CDF716FE1BBA00759F52 /* InfoPlist.strings */; };
 		4954CDFC16FE1BBA00759F52 /* GoL_engineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4954CDFB16FE1BBA00759F52 /* GoL_engineTests.m */; };
+		4954CE0716FE1CF200759F52 /* GoLGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 4954CE0616FE1CF200759F52 /* GoLGrid.m */; };
+		4954CE0816FE1CF200759F52 /* GoLGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 4954CE0616FE1CF200759F52 /* GoLGrid.m */; };
+		49E376E216FE2164005A01F5 /* GoLGrid_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E376E116FE2164005A01F5 /* GoLGrid_Tests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,10 @@
 		4954CDF816FE1BBA00759F52 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4954CDFA16FE1BBA00759F52 /* GoL_engineTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoL_engineTests.h; sourceTree = "<group>"; };
 		4954CDFB16FE1BBA00759F52 /* GoL_engineTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoL_engineTests.m; sourceTree = "<group>"; };
+		4954CE0516FE1CF200759F52 /* GoLGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoLGrid.h; sourceTree = "<group>"; };
+		4954CE0616FE1CF200759F52 /* GoLGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoLGrid.m; sourceTree = "<group>"; };
+		49E376E016FE2164005A01F5 /* GoLGrid_Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoLGrid_Tests.h; sourceTree = "<group>"; };
+		49E376E116FE2164005A01F5 /* GoLGrid_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoLGrid_Tests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +130,8 @@
 				4954CDE316FE1BBA00759F52 /* GoLViewController.m */,
 				4954CDE516FE1BBA00759F52 /* GoLViewController.xib */,
 				4954CDD116FE1BB900759F52 /* Supporting Files */,
+				4954CE0516FE1CF200759F52 /* GoLGrid.h */,
+				4954CE0616FE1CF200759F52 /* GoLGrid.m */,
 			);
 			path = "GoL-engine";
 			sourceTree = "<group>";
@@ -147,6 +156,8 @@
 				4954CDFA16FE1BBA00759F52 /* GoL_engineTests.h */,
 				4954CDFB16FE1BBA00759F52 /* GoL_engineTests.m */,
 				4954CDF516FE1BBA00759F52 /* Supporting Files */,
+				49E376E016FE2164005A01F5 /* GoLGrid_Tests.h */,
+				49E376E116FE2164005A01F5 /* GoLGrid_Tests.m */,
 			);
 			path = "GoL-engineTests";
 			sourceTree = "<group>";
@@ -274,6 +285,7 @@
 				4954CDD716FE1BB900759F52 /* main.m in Sources */,
 				4954CDDB16FE1BB900759F52 /* GoLAppDelegate.m in Sources */,
 				4954CDE416FE1BBA00759F52 /* GoLViewController.m in Sources */,
+				4954CE0716FE1CF200759F52 /* GoLGrid.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +294,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4954CDFC16FE1BBA00759F52 /* GoL_engineTests.m in Sources */,
+				4954CE0816FE1CF200759F52 /* GoLGrid.m in Sources */,
+				49E376E216FE2164005A01F5 /* GoLGrid_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +470,7 @@
 				4954CE0116FE1BBA00759F52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4954CE0216FE1BBA00759F52 /* Build configuration list for PBXNativeTarget "GoL-engineTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +479,7 @@
 				4954CE0416FE1BBA00759F52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

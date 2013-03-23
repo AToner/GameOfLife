@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 Andrew Toner. All rights reserved.
 //
 
+#import "GoLGrid.h"
+#import "GoLCell.h"
 #import "GoLGrid_Tests.h"
 
 @interface GoLGrid_Tests ()
@@ -46,6 +48,10 @@
     STAssertEquals([[NSNumber numberWithInteger:resultingGrid.count] intValue],
                    [[NSNumber numberWithFloat:height] intValue],
                    @"Resulting grid array count should be height");
+    
+    GoLCell *cell = [_grid getCellFromX:1 Y:1];
+    STAssertTrue([cell isKindOfClass:[GoLCell class]], @"Actually have a cell");
+    STAssertTrue([cell.generation intValue] == 0, @"The cell is 1st generation");
 }
 
 @end

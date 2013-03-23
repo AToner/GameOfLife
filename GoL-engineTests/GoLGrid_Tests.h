@@ -6,7 +6,6 @@
 //  Copyright (c) 2013 Andrew Toner. All rights reserved.
 //
 
-#import "GoLGrid.h"
 #import <SenTestingKit/SenTestingKit.h>
 
 @interface GoLGrid_Tests : SenTestCase

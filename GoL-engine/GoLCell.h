@@ -10,4 +10,10 @@
 
 @interface GoLCell : NSObject
 
+@property (strong, readonly) NSNumber *generation;
+
+- (void)kill;
+- (void)create;
+- (BOOL)isAlive;
+
 @end

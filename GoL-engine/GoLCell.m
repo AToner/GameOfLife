@@ -8,6 +8,36 @@
 
 #import "GoLCell.h"
 
+@interface GoLCell ()
+
+@end
+
 @implementation GoLCell
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        _generation = 0;
+    }
+    return self;
+}
+
+- (void)kill
+{
+    _generation = 0;
+}
+
+- (void)create
+{
+    if (!self.isAlive) {
+        _generation = [NSNumber numberWithInt:1];
+    }
+}
+
+- (BOOL)isAlive
+{
+    return (self.generation > 0);
+}
 
 @end

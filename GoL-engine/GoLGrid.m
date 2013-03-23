@@ -6,7 +6,6 @@
 //  Copyright (c) 2013 Andrew Toner. All rights reserved.
 //
 
-#import "GoLCell.h"
 #import "GoLGrid.h"
 
 @interface GoLGrid ()
@@ -33,6 +32,11 @@
         }
     }
     return self;
+}
+
+- (GoLCell *)getCellFromX:(int)x Y:(int)y
+{
+    return _theGrid[x][y];
 }
 
 - (NSArray *)getGrid

@@ -12,12 +12,26 @@
 
 @end
 
+static const CGFloat height = 20;
+static const CGFloat width = 20;
+
 @implementation GoLViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    // Set-up code here.
+    CGSize size = CGSizeMake(width, height);
+    GoLGrid *grid = [[GoLGrid alloc] initWithSize:size];
+    
+    GoLCell *cell1 = [grid getCellFromX:1 Y:0];
+    GoLCell *cell2 = [grid getCellFromX:1 Y:1];
+    GoLCell *cell3 = [grid getCellFromX:1 Y:2];
+    [cell1 live];
+    [cell2 live];
+    [cell3 live];
+    [_gridView setGrid:grid];
 }
 
 - (void)didReceiveMemoryWarning

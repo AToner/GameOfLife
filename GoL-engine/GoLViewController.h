@@ -6,8 +6,11 @@
 //  Copyright (c) 2013 Andrew Toner. All rights reserved.
 //
 
+#import "GoLView.h"
 #import <UIKit/UIKit.h>
 
 @interface GoLViewController : UIViewController
+
+@property (strong, nonatomic) IBOutlet GoLView *gridView;
 
 @end

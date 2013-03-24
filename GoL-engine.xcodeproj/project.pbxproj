@@ -24,6 +24,7 @@
 		4954CDF916FE1BBA00759F52 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4954CDF716FE1BBA00759F52 /* InfoPlist.strings */; };
 		4954CDFC16FE1BBA00759F52 /* GoL_engineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4954CDFB16FE1BBA00759F52 /* GoL_engineTests.m */; };
 		4954CE0716FE1CF200759F52 /* GoLGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 4954CE0616FE1CF200759F52 /* GoLGrid.m */; };
+		49851C8916FF957400E947B4 /* GoLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49851C8816FF957400E947B4 /* GoLView.m */; };
 		49E376E216FE2164005A01F5 /* GoLGrid_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E376E116FE2164005A01F5 /* GoLGrid_Tests.m */; };
 		49E376E516FE3285005A01F5 /* GoLCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E376E416FE3285005A01F5 /* GoLCell.m */; };
 		49E376E916FE329A005A01F5 /* GoLCell_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E376E816FE329A005A01F5 /* GoLCell_Tests.m */; };
@@ -64,6 +65,8 @@
 		4954CDFB16FE1BBA00759F52 /* GoL_engineTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoL_engineTests.m; sourceTree = "<group>"; };
 		4954CE0516FE1CF200759F52 /* GoLGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoLGrid.h; sourceTree = "<group>"; };
 		4954CE0616FE1CF200759F52 /* GoLGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoLGrid.m; sourceTree = "<group>"; };
+		49851C8716FF957400E947B4 /* GoLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoLView.h; sourceTree = "<group>"; };
+		49851C8816FF957400E947B4 /* GoLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoLView.m; sourceTree = "<group>"; };
 		49E376E016FE2164005A01F5 /* GoLGrid_Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoLGrid_Tests.h; sourceTree = "<group>"; };
 		49E376E116FE2164005A01F5 /* GoLGrid_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoLGrid_Tests.m; sourceTree = "<group>"; };
 		49E376E316FE3285005A01F5 /* GoLCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoLCell.h; sourceTree = "<group>"; };
@@ -134,6 +137,8 @@
 				4954CDE216FE1BBA00759F52 /* GoLViewController.h */,
 				4954CDE316FE1BBA00759F52 /* GoLViewController.m */,
 				4954CDE516FE1BBA00759F52 /* GoLViewController.xib */,
+				49851C8716FF957400E947B4 /* GoLView.h */,
+				49851C8816FF957400E947B4 /* GoLView.m */,
 				4954CDD116FE1BB900759F52 /* Supporting Files */,
 				4954CE0516FE1CF200759F52 /* GoLGrid.h */,
 				4954CE0616FE1CF200759F52 /* GoLGrid.m */,
@@ -296,6 +301,7 @@
 				4954CDE416FE1BBA00759F52 /* GoLViewController.m in Sources */,
 				4954CE0716FE1CF200759F52 /* GoLGrid.m in Sources */,
 				49E376E516FE3285005A01F5 /* GoLCell.m in Sources */,
+				49851C8916FF957400E947B4 /* GoLView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

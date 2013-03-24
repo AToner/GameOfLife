@@ -24,7 +24,7 @@
     return self;
 }
 
-- (void)kill
+- (void)die
 {
     _generation = 0;
 }
@@ -33,6 +33,15 @@
 {
     if (!self.isAlive) {
         _generation = [NSNumber numberWithInt:1];
+    }
+}
+
+- (void)live
+{
+    if (self.isAlive) {
+        _generation = [NSNumber numberWithInt:([self.generation intValue] + 1)];
+    } else {
+        [self create];
     }
 }
 

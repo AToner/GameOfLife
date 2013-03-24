@@ -13,8 +13,9 @@
 @property (strong, readonly) NSNumber *generation;
 @property (strong, nonatomic) NSSet *neighbours;
 
-- (void)kill;
+- (void)die;
 - (void)create;
 - (BOOL)isAlive;
+- (void)live;
 
 @end

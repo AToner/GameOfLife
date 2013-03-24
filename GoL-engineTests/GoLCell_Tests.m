@@ -35,7 +35,7 @@
     [cell create];
     STAssertTrue(cell.isAlive, @"Cell should be alive");
     
-    [cell kill];
+    [cell die];
     STAssertFalse(cell.isAlive, @"Cell should be dead again");
 }
 @end

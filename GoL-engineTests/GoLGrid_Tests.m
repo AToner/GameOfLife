@@ -49,9 +49,17 @@
                    [[NSNumber numberWithFloat:height] intValue],
                    @"Resulting grid array count should be height");
     
-    GoLCell *cell = [_grid getCellFromX:1 Y:1];
-    STAssertTrue([cell isKindOfClass:[GoLCell class]], @"Actually have a cell");
-    STAssertTrue([cell.generation intValue] == 0, @"The cell is 1st generation");
+    GoLCell *cell1 = [_grid getCellFromX:1 Y:1];
+    STAssertTrue([cell1 isKindOfClass:[GoLCell class]], @"Actually have a cell");
+    STAssertTrue([cell1.generation intValue] == 0, @"The cell has no generation");
+    [cell1 create];
+    
+    GoLCell *cell2 = [_grid getCellFromX:0 Y:1];
+    [cell2 create];
+ 
+    STAssertEquals([_grid getNeighbourCountForX:1 Y:1], 1, @"Should be 1 neighbour");
+    STAssertEquals([_grid getNeighbourCountForX:0 Y:0], 2, @"Should be 2 neighbours");
+    STAssertEquals([_grid getNeighbourCountForX:10 Y:10], 0, @"Should be 0 neighbours");
 }
 
 @end

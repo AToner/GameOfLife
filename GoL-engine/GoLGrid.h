@@ -17,6 +17,7 @@
 
 - (NSArray *)getGrid;
 - (GoLCell *)getCellFromX:(int)x Y:(int)y;
+- (int)getNeighbourCountForX:(int)x Y:(int)y;
 
 
 @end

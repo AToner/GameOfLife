@@ -11,6 +11,7 @@
 @interface GoLCell : NSObject
 
 @property (strong, readonly) NSNumber *generation;
+@property (strong, nonatomic) NSSet *neighbours;
 
 - (void)kill;
 - (void)create;

@@ -19,6 +19,7 @@
     self = [super init];
     if (self) {
         _generation = 0;
+        _neighbours = [NSMutableArray array];
     }
     return self;
 }

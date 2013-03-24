@@ -32,6 +32,18 @@ static const CGFloat width = 20;
     [cell2 live];
     [cell3 live];
     [_gridView setGrid:grid];
+    
+    [NSTimer scheduledTimerWithTimeInterval:2.0
+                                     target:self
+                                   selector:@selector(nextGeneration)
+                                   userInfo:nil
+                                    repeats:YES];
+}
+
+- (void)nextGeneration
+{
+    [_gridView.grid nextGeneration];
+    [_gridView setNeedsDisplay];
 }
 
 - (void)didReceiveMemoryWarning

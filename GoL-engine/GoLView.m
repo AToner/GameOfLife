@@ -20,8 +20,7 @@ CGPoint lastTouchedPoint;
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        NSLog(@"Init with coder");
-        lastTouchedPoint = CGPointMake(-1, -1);
+        [self setup];
     }
     return self;
 }
@@ -30,9 +29,14 @@ CGPoint lastTouchedPoint;
 {
     self = [super initWithFrame:frame];
     if (self) {
-        NSLog(@"Init with Frame");
+        [self setup];
     }
     return self;
+}
+
+- (void)setup
+{
+    lastTouchedPoint = CGPointMake(-1, -1);
 }
 
 - (void)drawRect:(CGRect)rect

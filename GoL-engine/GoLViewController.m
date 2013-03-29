@@ -10,6 +10,8 @@
 
 @interface GoLViewController ()
 
+@property (strong, nonatomic) NSTimer *timer;
+
 @end
 
 static const CGFloat height = 50;
@@ -26,11 +28,8 @@ static const CGFloat width = 50;
     GoLGrid *grid = [[GoLGrid alloc] initWithSize:size];
     [self.gridView setGrid:grid];
     
-    [NSTimer scheduledTimerWithTimeInterval:1.0
-                                     target:self
-                                   selector:@selector(nextGeneration)
-                                   userInfo:nil
-                                    repeats:YES];
+    [self.startStopButton setTitle:@"Start" forState:UIControlStateNormal];
+    self.timer = nil;
 }
 
 - (void)nextGeneration
@@ -45,4 +44,18 @@ static const CGFloat width = 50;
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)startStop:(UIButton *)sender {
+    if (self.timer) {
+        [self.timer invalidate];
+        self.timer = nil;
+        [self.startStopButton setTitle:@"Start" forState:UIControlStateNormal];
+    } else {
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0f
+                                                      target:self
+                                                    selector:@selector(nextGeneration)
+                                                    userInfo:nil
+                                                     repeats:YES];
+        [self.startStopButton setTitle:@"Stop" forState:UIControlStateNormal];
+    }
+}
 @end

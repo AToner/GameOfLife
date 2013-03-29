@@ -12,5 +12,7 @@
 @interface GoLViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet GoLView *gridView;
+@property (strong, nonatomic) IBOutlet UIButton *startStopButton;
+- (IBAction)startStop:(UIButton *)sender;
 
 @end

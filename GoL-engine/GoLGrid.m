@@ -111,12 +111,16 @@
             GoLCell *newCell = [[GoLCell alloc] init];
             if (neighbours < 2 && oldCell.isAlive) {
                 [newCell die];
-            } else if ((neighbours >= 2 || neighbours <= 3) && oldCell.isAlive) {
+            } else if (neighbours == 2 && oldCell.isAlive) {
+                [newCell live];
+            } else if (neighbours == 3 && oldCell.isAlive) {
                 [newCell live];
             } else if (neighbours > 3 && oldCell.isAlive) {
                 [newCell die];
-            } else if (neighbours == 3 && !newCell.isAlive) {
+            } else if (neighbours == 3 && !oldCell.isAlive) {
                 [newCell create];
+            } else {
+                [newCell die];
             }
             newGrid[y][x] = newCell;
         }

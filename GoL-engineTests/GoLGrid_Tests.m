@@ -103,4 +103,49 @@ static const CGFloat width = 20;
     STAssertFalse(cell3.isAlive, @"2,2 is dead");
 
 }
+
+- (void)testGeneration2
+{
+    /*
+     010
+     111
+     010
+     
+     010
+     101
+     010
+     */
+    GoLCell *cell1 = [_grid getCellFromX:1 Y:0];
+    GoLCell *cell2 = [_grid getCellFromX:1 Y:1];
+    GoLCell *cell3 = [_grid getCellFromX:1 Y:2];
+    GoLCell *cell4 = [_grid getCellFromX:0 Y:1];
+    GoLCell *cell5 = [_grid getCellFromX:2 Y:1];
+    [cell1 live];
+    [cell2 live];
+    [cell3 live];
+    [cell4 live];
+    [cell5 live];
+    _grid = [_grid nextGeneration];
+    
+    cell1 = [_grid getCellFromX:1 Y:0];
+    cell2 = [_grid getCellFromX:0 Y:1];
+    cell3 = [_grid getCellFromX:2 Y:1];
+    cell4 = [_grid getCellFromX:1 Y:2];
+    STAssertTrue(cell1.isAlive, @"1,0 is alive");
+    STAssertTrue(cell2.isAlive, @"0,1 is alive");
+    STAssertTrue(cell3.isAlive, @"2,1 is alive");
+    STAssertTrue(cell4.isAlive, @"1,2 is alive");
+    
+    cell1 = [_grid getCellFromX:1 Y:1];
+    STAssertFalse(cell1.isAlive, @"1,1 is dead");
+    
+//    cell1 = [_grid getCellFromX:0 Y:2];
+//    cell2 = [_grid getCellFromX:1 Y:2];
+//    cell3 = [_grid getCellFromX:2 Y:2];
+//    STAssertFalse(cell1.isAlive, @"0,2 is dead");
+//    STAssertFalse(cell2.isAlive, @"1,2 is dead");
+//    STAssertFalse(cell3.isAlive, @"2,2 is dead");
+    
+}
+
 @end

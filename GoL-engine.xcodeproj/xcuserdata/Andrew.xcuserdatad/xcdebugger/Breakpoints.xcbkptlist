@@ -8,7 +8,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GoL-engine/GoLGrid.m"
-         timestampString = "385792096.641392"
+         timestampString = "386216205.7516"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "107"
@@ -27,6 +27,19 @@
          startingLineNumber = "58"
          endingLineNumber = "58"
          landmarkName = "-calculateNeighbours"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "GoL-engine/GoLGrid.m"
+         timestampString = "386216205.7516"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "109"
+         endingLineNumber = "109"
+         landmarkName = "-nextGeneration"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
